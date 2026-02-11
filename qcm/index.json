@@ -1,6 +1,14 @@
 [
   {
-    "filename": "qcm-test.md",
-    "label": "qcm test"
+    "filename": "qcm-1.md",
+    "label": "qcm 1"
+  },
+  {
+    "filename": "qcm-2.md",
+    "label": "qcm 2"
+  },
+  {
+    "filename": "qcm-3.md",
+    "label": "qcm 3"
   }
 ]
