@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"$HOME/.nvm/versions/node/v25.5.0/bin:$PATH\")",
+      "Bash(npm run build:*)",
+      "Bash(npm run deploy:*)"
+    ]
+  }
+}

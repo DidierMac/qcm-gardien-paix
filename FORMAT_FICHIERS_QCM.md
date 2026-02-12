@@ -17,7 +17,6 @@ Texte de la question ?
 - [ ] **a.** Réponse A
 - [ ] **b.** Réponse B
 - [ ] **c.** Réponse C
-- [ ] **d.** Réponse D
 
 **✅ Réponse correcte : b**
 📎 Source : [Titre de la source](https://url-de-la-source.fr)
@@ -36,38 +35,42 @@ Texte de la question ?
 ## Règles détaillées
 
 ### En-tête du fichier
+
 - `# Titre` — une seule ligne commençant par `# ` (un dièse + espace)
 - Ligne de description — texte libre, sur la ligne suivante
 - Séparateur `---` avant la première question
 
 ### Chaque question
+
 1. **Marqueur de question** : `### Question N` (trois dièses + espace + le mot "Question" + le numéro)
 2. **Texte de la question** : sur la ligne suivante, texte libre se terminant par `?`
 3. **Options** : 4 options, chacune sur sa propre ligne, au format :
+
    ```
    - [ ] **a.** Texte de la réponse
    ```
+
    - Les lettres sont : `a`, `b`, `c`, `d` (minuscules)
    - Le point après la lettre est obligatoire : `**a.**`
    - Une ligne vide avant la réponse correcte
-
 4. **Réponse correcte** (obligatoire) :
+
    ```
    **✅ Réponse correcte : b**
    ```
+
    - La lettre est en minuscule (`a`, `b`, `c` ou `d`)
    - L'emoji ✅ est facultatif mais recommandé
-
 5. **Source** (facultative) :
+
    ```
    📎 Source : [Titre du texte](https://url.com)
    ```
-
 6. **Explication** (facultative) :
+
    ```
    💡 Explication : Texte explicatif en une ou plusieurs phrases.
    ```
-
 7. **Séparateur de fin** : ligne `---` après chaque question (y compris la dernière)
 
 ---
@@ -85,7 +88,6 @@ Quel est le délai de prescription de l'action publique pour un crime en France 
 - [ ] **a.** 3 ans
 - [ ] **b.** 6 ans
 - [ ] **c.** 20 ans
-- [ ] **d.** 30 ans
 
 **✅ Réponse correcte : c**
 📎 Source : [Article 7 du Code de procédure pénale](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038311454/)
@@ -98,7 +100,6 @@ Quelle est la peine maximale encourue pour un délit en droit français ?
 - [ ] **a.** 5 ans d'emprisonnement
 - [ ] **b.** 10 ans d'emprisonnement
 - [ ] **c.** 20 ans d'emprisonnement
-- [ ] **d.** La réclusion criminelle à perpétuité
 
 **✅ Réponse correcte : b**
 📎 Source : [Article 131-4 du Code pénal](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417206/)
@@ -111,7 +112,6 @@ Qu'est-ce que la légitime défense ?
 - [ ] **a.** Le droit de se faire justice soi-même en toutes circonstances
 - [ ] **b.** Le droit de riposter à une attaque injuste, de manière proportionnée et nécessaire
 - [ ] **c.** L'autorisation de porter une arme pour se protéger
-- [ ] **d.** L'immunité totale accordée aux forces de l'ordre
 
 **✅ Réponse correcte : b**
 📎 Source : [Article 122-5 du Code pénal](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006417229/)
@@ -124,7 +124,6 @@ Quelle infraction est classée comme une contravention de 5e classe ?
 - [ ] **a.** Le vol simple
 - [ ] **b.** Les violences volontaires sans incapacité
 - [ ] **c.** La destruction légère de biens d'autrui
-- [ ] **d.** L'escroquerie
 
 **✅ Réponse correcte : b**
 📎 Source : [Article R625-1 du Code pénal](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006418007/)
@@ -137,7 +136,6 @@ Quel organe est chargé de diriger la police judiciaire ?
 - [ ] **a.** Le préfet
 - [ ] **b.** Le ministre de l'Intérieur
 - [ ] **c.** Le procureur de la République
-- [ ] **d.** Le juge d'instruction
 
 **✅ Réponse correcte : c**
 📎 Source : [Article 41 du Code de procédure pénale](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042193712/)
@@ -157,20 +155,5 @@ Quel organe est chargé de diriger la police judiciaire ?
 - [ ] La réponse correcte est au format `**✅ Réponse correcte : x**` (lettre minuscule)
 - [ ] Chaque question est séparée par `---`
 - [ ] Le fichier se termine par `---`
-- [ ] Si plusieurs fichiers QCM, créer/mettre à jour `public/qcm/index.json` (voir ci-dessous)
 
 ---
-
-## Ajouter plusieurs fichiers QCM
-
-Pour que l'application reconnaisse plusieurs fichiers, créez `public/qcm/index.json` :
-
-```json
-[
-  { "filename": "qcm-droit-penal.md",     "label": "Droit pénal" },
-  { "filename": "qcm-institutions.md",    "label": "Institutions de la République" },
-  { "filename": "qcm-culture-generale.md","label": "Culture générale" }
-]
-```
-
-Sans ce fichier, l'application charge uniquement `qcm-test.md` par défaut.

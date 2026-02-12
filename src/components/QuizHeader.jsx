@@ -1,6 +1,6 @@
 import { BookOpen, Award } from 'lucide-react';
 
-export default function QuizHeader({ title, current, total, liveScore }) {
+export default function QuizHeader({ title, filename, current, total, liveScore }) {
   const percentage = total > 0 ? Math.round((current / total) * 100) : 0;
 
   return (
@@ -10,7 +10,12 @@ export default function QuizHeader({ title, current, total, liveScore }) {
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2 min-w-0">
             <BookOpen size={20} className="shrink-0" />
-            <h1 className="text-base font-semibold leading-tight truncate">{title}</h1>
+            <div className="min-w-0">
+              <h1 className="text-base font-semibold leading-tight truncate">{title}</h1>
+              {filename && (
+                <p className="text-xs text-indigo-300 leading-tight">{filename}</p>
+              )}
+            </div>
           </div>
           {liveScore !== undefined && (
             <div className="flex items-center gap-1 bg-indigo-600 rounded-lg px-2 py-1 shrink-0">

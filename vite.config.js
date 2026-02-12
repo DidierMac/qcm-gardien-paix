@@ -38,4 +38,7 @@ export default defineConfig({
   ],
   // Pour GitHub Pages : mettre le nom exact du dépôt GitHub
   base: '/qcm-gardien-paix/',
+  build: {
+    emptyOutDir: false, // Désactiver le vidage automatique du dossier dist
+  },
 })

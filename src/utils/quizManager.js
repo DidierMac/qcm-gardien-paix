@@ -6,7 +6,7 @@ import { parseMarkdown } from './markdownParser.js';
  * @returns {Promise<{ title: string, description: string, questions: Array }>}
  */
 export async function loadQuiz(filename) {
-  const url = `/qcm/${filename}`;
+  const url = `${import.meta.env.BASE_URL}qcm/${filename}`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Impossible de charger le fichier QCM : ${url} (${response.status})`);
@@ -22,7 +22,7 @@ export async function loadQuiz(filename) {
  */
 export async function listQuizzes() {
   try {
-    const response = await fetch('/qcm/index.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}qcm/index.json`);
     if (response.ok) {
       return await response.json();
     }
